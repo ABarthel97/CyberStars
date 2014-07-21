@@ -1,22 +1,26 @@
 Cyber Stars 2014 - C Programming and Arduino
 
 - Introduction and Welcome
+ - Around the room :)
  - Josh Stroschein - joshua.stroschein@dsu.edu
 
 - VMWare Player and our programming environment
   - What is Kali?
     - What NOT to do with Kali?
+  - root vs administrator
   - How do we create code in here? nano, vi, gedit, etc
     - Let's install gedit with apt-get
 
 - C Programming basics plus lexicon
   - code will be hosted on github
   - Syntax
-  - Errors vs Warnings
+  - Errors - Syntax vs Logic vs Runtime
+  - Compiling - Errors vs Warnings
 
 - Our first program - Hello World!
   - Variables
   - printf
+  - simple math
   - scanf
   - IF Statements
   - Loops
