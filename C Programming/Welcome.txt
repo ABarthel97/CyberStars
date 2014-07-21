@@ -1,0 +1,25 @@
+Cyber Stars 2014 - C Programming and Arduino
+
+- Introduction and Welcome
+ - Josh Stroschein - joshua.stroschein@dsu.edu
+
+- VMWare Player and our programming environment
+  - What is Kali?
+    - What NOT to do with Kali?
+  - How do we create code in here? nano, vi, gedit, etc
+    - Let's install gedit with apt-get
+
+- C Programming basics plus lexicon
+  - code will be hosted on github
+  - Syntax
+  - Errors vs Warnings
+
+- Our first program - Hello World!
+  - Variables
+  - printf
+  - scanf
+  - IF Statements
+  - Loops
+  - Functions
+  - Arrays
+  - More?
