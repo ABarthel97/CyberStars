@@ -2,11 +2,14 @@
   Arduino Mario Bros Tunes
   With Piezo Buzzer and PWM
   by: Dipto Pratyaksa
-  last updated: 31/3/13
+  last updated: 31/3/ledPin
 */
 #include "pitches.h"
 
 #define melodyPin 9
+#define ledPin 13
+#define pushButtonPin 2
+
 //Mario main theme melody
 int melody[] = {
   NOTE_E7, NOTE_E7, 0, NOTE_E7, 
@@ -110,16 +113,20 @@ int underworld_tempo[] = {
 
 void setup(void)
 {
-   pinMode(9, OUTPUT);//buzzer
-   pinMode(13, OUTPUT);//led indicator when singing a note
+   pinMode(melodyPin, OUTPUT);//buzzer
+   pinMode(ledPin, OUTPUT);//led indicator when singing a note
+   pinMode(pushButtonPin, INPUT);
 
 }
 void loop()
 {
 //sing the tunes
-  sing(1);
-  sing(1);
-  sing(2);
+  if(digitalRead(pushButtonPin, HIGH)
+  {
+    sing(1);
+    sing(1);
+    sing(2);
+  }
 }
 int song = 0;
 
@@ -174,7 +181,7 @@ void sing(int s){
 }
 
 void buzz(int targetPin, long frequency, long length) {
-  digitalWrite(13,HIGH);
+  digitalWrite(ledPin,HIGH);
   long delayValue = 1000000/frequency/2; // calculate the delay value between transitions
   //// 1 second's worth of microseconds, divided by the frequency, then split in half since
   //// there are two phases to each cycle
@@ -187,6 +194,6 @@ void buzz(int targetPin, long frequency, long length) {
     digitalWrite(targetPin,LOW); // write the buzzer pin low to pull back the diaphram
     delayMicroseconds(delayValue); // wait again or the calculated delay value
   }
-  digitalWrite(13,LOW);
+  digitalWrite(ledPin,LOW);
 
 }
